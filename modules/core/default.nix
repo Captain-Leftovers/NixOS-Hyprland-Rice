@@ -16,5 +16,6 @@
     ./user.nix
     ./wayland.nix
     ./virtualization.nix
+    ./bluetooth.nix
   ];
 }
