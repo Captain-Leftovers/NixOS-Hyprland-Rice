@@ -1,5 +1,6 @@
-{ pkgs, config, ... }:
+{ pkgs, config, inputs, ... }:
 {
+  
   imports = [
     ./hardware-configuration.nix
     ./../../modules/core
