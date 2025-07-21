@@ -68,7 +68,7 @@ in
     }
 
     #tray {
-      margin-left: 10px;
+      margin-left: 20px;
       color: ${text_color};
     }
     #tray menu {

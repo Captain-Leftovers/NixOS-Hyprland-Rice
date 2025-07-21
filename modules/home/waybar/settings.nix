@@ -39,9 +39,8 @@ in
       "memory"
       (if (host == "desktop") then "disk" else "")
       "pulseaudio"
-      "network"
+      #"network"
       "battery"
-      "bluetooth"
       "hyprland/language"
       "custom/notification"
     ];
@@ -108,17 +107,11 @@ in
       format-disconnected = "<span foreground='${magenta}'>󰖪 </span>";
     };
     tray = {
-      icon-size = 20;
-      spacing = 8;
+      
+      icon-size = 28;
+      spacing = 10;
     };  
-    bluetooth = {
-      format = "󰂯"; # You can customize this icon
-      format-connected = "<span foreground='${blue}'>󰂱{device}</span>";
-      format-disconnected = "<span foreground='${red}'>󰂲</span>";
-      tooltip-format = "Bluetooth: {status}\nDevice: {device}";
-      tooltip = true;
-      on-click = "blueman-manager";
-    };
+   
     pulseaudio = {
       format = "{icon} {volume}%";
       format-muted = "<span foreground='${blue}'> </span> {volume}%";
@@ -126,7 +119,7 @@ in
         default = [ "<span foreground='${blue}'> </span>" ];
       };
       scroll-step = 2;
-      on-click = "pamixer -t";
+      on-click = "pamixer -t"; 
       on-click-right = "pavucontrol";
     };
     battery = {
@@ -151,8 +144,9 @@ in
     };
     "hyprland/language" = {
       format = "<span foreground='#FABD2F'> </span> {}";
-      format-fr = "FR";
+      format-bg = "BG";
       format-en = "US";
+      
     };
     "custom/launcher" = {
       format = "";
