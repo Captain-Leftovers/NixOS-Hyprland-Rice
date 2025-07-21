@@ -41,6 +41,7 @@ in
       "pulseaudio"
       "network"
       "battery"
+      "bluetooth"
       "hyprland/language"
       "custom/notification"
     ];
@@ -109,6 +110,14 @@ in
     tray = {
       icon-size = 20;
       spacing = 8;
+    };  
+    bluetooth = {
+      format = "󰂯"; # You can customize this icon
+      format-connected = "<span foreground='${blue}'>󰂱{device}</span>";
+      format-disconnected = "<span foreground='${red}'>󰂲</span>";
+      tooltip-format = "Bluetooth: {status}\nDevice: {device}";
+      tooltip = true;
+      on-click = "blueman-manager";
     };
     pulseaudio = {
       format = "{icon} {volume}%";
