@@ -39,11 +39,24 @@ in
       "memory"
       (if (host == "desktop") then "disk" else "")
       "pulseaudio"
+      "bluetooth"
       #"network"
       "battery"
       "hyprland/language"
       "custom/notification"
     ];
+    #Bluetooth
+    "bluetooth" = {
+    	"format" = "<span foreground='${blue}'> </span>";
+    	"format-connected" = "<span foreground='${blue}'> </span> {device_alias}";
+    	"format-connected-battery" = "<span foreground='${orange}'> </span>{device_alias} {device_battery_percentage}%";
+    	# "format-device-preference" = [ "device1", "device2" ]; # preference list deciding the displayed device
+    	"tooltip-format" = "{controller_alias}\t{controller_address}\n\n{num_connections} connected";
+    	"tooltip-format-connected" = "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}";
+    	"tooltip-format-enumerate-connected" = "{device_alias}\t{device_address}";
+    	"tooltip-format-enumerate-connected-battery" = "{device_alias}\t{device_address}\t{device_battery_percentage}%";
+    	on-click = "blueman-manager";
+    };
     clock = {
       calendar = {
         format = {
