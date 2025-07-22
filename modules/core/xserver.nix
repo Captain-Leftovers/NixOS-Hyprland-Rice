@@ -3,7 +3,8 @@
   services = {
     xserver = {
       enable = true;
-      xkb.layout = "us,bg(phonetic)";
+      xkb.layout = "us,bg";
+      xkb.variant = ",phonetic";
     };
 
     displayManager.autoLogin = {
