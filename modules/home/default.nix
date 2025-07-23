@@ -34,8 +34,9 @@
     ./swaylock.nix                    # lock screen
     ./swayosd.nix                     # brightness / volume wiget
     ./swaync/swaync.nix               # notification deamon
-    # ./viewnior.nix                    # image viewer
-    ./vscodium                        # vscode fork
+    # ./viewnior.nix                  # image viewer
+    # ./vscodium                      # vscode fork   
+    ./vscode                          # official VsCode
     ./waybar                          # status bar
     ./waypaper.nix                    # GUI wallpaper picker
     ./xdg-mimes.nix                   # xdg config
