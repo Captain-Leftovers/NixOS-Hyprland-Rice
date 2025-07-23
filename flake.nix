@@ -50,12 +50,12 @@
 
       overlays = {
         default = final: prev: {
-         waybar = prev.waybar.override {
-           withBluetooth = true;
+          waybar = prev.waybar.override {
+            withBluetooth = true;
+          };
         };
       };
-    };
-    
+
       pkgs = import nixpkgs {
         inherit system;
         config.allowUnfree = true;
@@ -67,7 +67,12 @@
       nixosConfigurations = {
         desktop = nixpkgs.lib.nixosSystem {
           inherit system;
-          modules = [ ./hosts/desktop ];
+          modules = [
+            ./hosts/desktop
+            {
+              nixpkgs.config.allowUnfree = true;
+            }
+          ];
           specialArgs = {
             host = "desktop";
             inherit self inputs username;

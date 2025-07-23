@@ -17,5 +17,6 @@
     ./wayland.nix
     ./virtualization.nix
     ./bluetooth.nix
+    ./expressvpn.nix
   ];
 }
