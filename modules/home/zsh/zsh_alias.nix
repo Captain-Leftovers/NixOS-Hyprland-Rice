@@ -8,7 +8,7 @@
       tt = "gtrash put";
       cat = "bat";
       nano = "micro";
-      code = "codium";
+      #code = "codium";
       diff = "delta --diff-so-fancy --side-by-side";
       less = "bat";
       f = "superfile";
