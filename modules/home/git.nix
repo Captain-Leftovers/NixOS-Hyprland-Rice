@@ -31,6 +31,30 @@
     .vscode
   '';
 
+  #adding some ssh cofigs to try and fix ssh to github
+  home.file.".ssh/config".text = ''
+    Host github.com
+      HostName ssh.github.com
+      Port 443
+      User git
+      IdentityFile ~/.ssh/id_github
+      IdentitiesOnly yes
+      IPQoS throughput
+  
+    Host *
+      ForwardAgent no
+      AddKeysToAgent 1h
+      Compression no
+      ServerAliveInterval 0
+      ServerAliveCountMax 3
+      HashKnownHosts no
+      UserKnownHostsFile ~/.ssh/known_hosts
+      ControlMaster auto
+      ControlPath ~/.ssh/control-%r@%h:%p
+      ControlPersist 10m
+  '';
+  #
+
   programs.zsh.shellAliases = {
   #   g = "lazygit";
   #   gf = "onefetch --number-of-file-churns 0 --no-color-palette";
