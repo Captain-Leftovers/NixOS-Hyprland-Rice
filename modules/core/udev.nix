@@ -2,7 +2,6 @@
 
 {
   services.udev.extraRules = ''
-    # Allow all users to write to the keyboard backlight device
-    SUBSYSTEM=="leds", KERNEL=="tpacpi::kbd_backlight", MODE="0666", TAG+="uaccess"
+    ACTION=="add", SUBSYSTEM=="leds", KERNEL=="tpacpi::kbd_backlight", RUN+="${pkgs.coreutils}/bin/chmod 0666 /sys/class/leds/tpacpi::kbd_backlight/brightness"
   '';
 }

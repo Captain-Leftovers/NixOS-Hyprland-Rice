@@ -49,7 +49,7 @@
   "actions": [
     {
       "label": "💡 Cycle Keyboard Brightness",
-      "command": "~/.config/swaync/scripts/cycle-kbd-light.sh"
+      "command": "cycle-kbd-light"
     }
   ]
 },
