@@ -30,16 +30,29 @@
     "volume",
     "backlight#mobile",
     "mpris",
+    "backlight#screen",
     "dnd",
     "notifications"
   ],
   "widget-config": {
+
+
     "title": {
       "text": "Notifications",
       "clear-all-button": true,
       "button-text": " Clear All "
     },
     "menubar#desktop": {
+      "menu#keyboard-light": {
+  "label": "󰌌",
+  "position": "left",
+  "actions": [
+    {
+      "label": "💡 Cycle Keyboard Brightness",
+      "command": "~/.config/swaync/scripts/cycle-kbd-light.sh"
+    }
+  ]
+},
       "menu#powermode-buttons": {
         "label": " 󰌪 ",
         "position": "left",
@@ -115,7 +128,7 @@
     },
     "backlight#mobile": {
       "label": " 󰃠 ",
-      "device": "panel"
+     "device": "panel"
     },
     "volume": {
       "label": "",
@@ -125,6 +138,11 @@
       "show-per-app-icon": true,
       "show-per-app-label": false
     },
+    
+        "backlight#screen": {
+      "label": "󰃠 ",
+      "device": "amdgpu_bl1"
+      },
     "dnd": {
       "text": " Do Not Disturb"
     },

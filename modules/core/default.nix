@@ -18,5 +18,6 @@
     ./virtualization.nix
     ./bluetooth.nix
     ./expressvpn-system.nix
+    ./udev.nix
   ];
 }
