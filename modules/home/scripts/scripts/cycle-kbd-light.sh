@@ -6,7 +6,7 @@ MAX=2
 cur=$(cat "$LED_PATH")
 next=$(( (cur + 1) % (MAX + 1) ))
 
-echo $next | sudo tee "$LED_PATH" > /dev/null
+echo $next > "$LED_PATH"
 
 case "$next" in
   0) notify-send "💡 Keyboard Backlight" "Turned OFF" ;;
