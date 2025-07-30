@@ -35,6 +35,7 @@
     ./swaylock.nix # lock screen
     ./swayosd.nix # brightness / volume wiget
     ./swaync/swaync.nix # notification deamon
+    ./taskwarrior.nix   # todo / task cli
     # ./viewnior.nix                  # image viewer
     # ./vscodium                      # vscode fork
     ./vscode # official VsCode
