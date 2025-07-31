@@ -15,8 +15,6 @@
     enable = true;
 
     settings = {
-      # Use Nightly Neovim from overlay
-      package = inputs.neovim-overlay.packages.${pkgs.system}.neovim;
 
       vim = {
         theme = {
@@ -30,8 +28,7 @@
         # Optional but nice
         statusline.lualine.enable = true;
 
-        cmp.enable = true; # Completion engine
-        autopairs.enable = true; # Automatically close brackets
+        # cmp.enable = true; # Completion engine -> apparently wrong line
         telescope.enable = true; # Fuzzy finder
       };
     };
