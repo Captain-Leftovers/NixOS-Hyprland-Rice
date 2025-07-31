@@ -41,14 +41,16 @@
 
     ghostty.url = "github:ghostty-org/ghostty";
 
-
     #Neovim
 
     # using the neovim-nightly overlay
-    vim.package = inputs.neovim-overlay.packages.${pkgs.stdenv.system}.neovim;
+    # ✅ Neovim Nightly Overlay
+    neovim-overlay = {
+      url = "github:nix-community/neovim-nightly-overlay";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
-    
-     # Optional, if you intend to follow nvf's obsidian-nvim input
+    # Optional, if you intend to follow nvf's obsidian-nvim input
     # you must also add it as a flake input.
     obsidian-nvim.url = "github:epwalsh/obsidian.nvim";
 
@@ -61,7 +63,8 @@
       inputs.nixpkgs.follows = "nixpkgs";
       # Optionally, you can also override individual plugins
       # for example:
-      inputs.obsidian-nvim.follows = "obsidian-nvim"; # <- this will use the obsidian-nvim from your inputs
+      # inputs.obsidian-nvim.follows = "obsidian-nvim"; # <- this will use the obsidian-nvim from your inputs
+    };
   };
 
   outputs =
