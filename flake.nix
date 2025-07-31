@@ -68,23 +68,36 @@
   };
 
   outputs =
-    { nixpkgs, self, ... }@inputs:
+    {
+      nixpkgs,
+      self,
+      neovim-overlay,
+      ...
+    }@inputs:
     let
       username = "beeondweb";
       system = "x86_64-linux";
 
       overlays = {
+
         default = final: prev: {
+
           waybar = prev.waybar.override {
             withBluetooth = true;
           };
+
         };
+
       };
 
       pkgs = import nixpkgs {
         inherit system;
         config.allowUnfree = true;
-        overlays = [ overlays.default ];
+
+        overlays = [
+          neovim-overlay.overlay
+          overlays.default
+        ];
       };
       lib = nixpkgs.lib;
     in
