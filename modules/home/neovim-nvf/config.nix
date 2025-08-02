@@ -24,7 +24,7 @@
       vim.lsp.enable = true;
       vim.treesitter.enable = true;
       vim.statusline.lualine.enable = true;
-      vim.ui.telescope.enable = true;
+      vim.telescope.enable = true;
 
       # Updated namespaces
       vim.autocomplete."nvim-cmp".enable = true;

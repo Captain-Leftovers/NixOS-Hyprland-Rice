@@ -45,10 +45,10 @@
 
     # using the neovim-nightly overlay
     # ✅ Neovim Nightly Overlay
-    # neovim-overlay = {
-    #   url = "github:nix-community/neovim-nightly-overlay";
-    #   inputs.nixpkgs.follows = "nixpkgs";
-    # };
+    neovim-overlay = {
+      url = "github:nix-community/neovim-nightly-overlay";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
     # Optional, if you intend to follow nvf's obsidian-nvim input
     # you must also add it as a flake input.
@@ -71,7 +71,7 @@
     {
       nixpkgs,
       self,
-      # neovim-overlay,
+      neovim-overlay,
       ...
     }@inputs:
     let
@@ -95,7 +95,7 @@
         config.allowUnfree = true;
 
         overlays = [
-          # neovim-overlay.overlay
+          neovim-overlay.overlay
           overlays.default
         ];
       };
@@ -122,6 +122,7 @@
           specialArgs = {
             host = "laptop";
             inherit self inputs username;
+            neovim-overlay = inputs.neovim-overlay;
           };
         };
         vm = nixpkgs.lib.nixosSystem {
