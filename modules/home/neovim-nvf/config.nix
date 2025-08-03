@@ -26,6 +26,10 @@
       vim.statusline.lualine.enable = true;
       vim.telescope.enable = true;
 
+      #Languages support
+      vim.languages.nix.enable = true;
+
+
       # Updated namespaces
       vim.autocomplete."nvim-cmp".enable = true;
       vim.autopairs."nvim-autopairs".enable = true;
