@@ -8,33 +8,41 @@
 {
   imports = [ inputs.nvf.homeManagerModules.default ];
 
+        
+
   programs.nvf = {
     enable = true;
 
     settings = {
-      vim.package =
+
+     vim = {
+
+        
+      package =
         inputs.neovim-overlay.packages.${pkgs.system}.neovim;
 
-      vim.theme = {
+      theme = {
         enable = true;
         name = "gruvbox";
         style = "dark";
       };
+        
 
-      vim.lsp.enable = true;
-      vim.treesitter.enable = true;
-      vim.statusline.lualine.enable = true;
-      vim.telescope.enable = true;
+      lsp.enable = true;
+      treesitter.enable = true;
+      statusline.lualine.enable = true;
+      telescope.enable = true;
 
       #Languages support
-      vim.languages.nix.enable = true;
-      vim.languages.ts.enable = true;
-      
+      languages.nix.enable = true;
+      languages.ts.enable = true;
+
 
       # Updated namespaces
-      vim.autocomplete."nvim-cmp".enable = true;
-      vim.autopairs."nvim-autopairs".enable = true;
-      vim.mini."ai".enable = true; # for in-editor LLM UI
+      autocomplete."nvim-cmp".enable = true;
+      autopairs."nvim-autopairs".enable = true;
+      mini."ai".enable = true; # for in-editor LLM UI
+      };
     };
   };
 }
