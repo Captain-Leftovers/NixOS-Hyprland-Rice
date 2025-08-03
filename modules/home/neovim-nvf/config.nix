@@ -34,8 +34,10 @@
       telescope.enable = true;
 
       #Languages support
-      languages.nix.enable = true;
-      languages.ts.enable = true;
+      languages = {
+        nix.enable = true;
+        ts.enable = true;
+        };
 
 
       # Updated namespaces
