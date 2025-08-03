@@ -28,7 +28,8 @@
 
       #Languages support
       vim.languages.nix.enable = true;
-
+      vim.languages.ts.enable = true;
+      
 
       # Updated namespaces
       vim.autocomplete."nvim-cmp".enable = true;
