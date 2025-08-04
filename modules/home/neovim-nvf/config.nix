@@ -30,11 +30,11 @@
 
       lsp = {
        enable = true;
-       # servers.nixd = {
-        #enable = true;
+        servers.nixd = {
+        enable = true;
         #package = pkgs.nixd;
-        #};
-         #servers.nil_ls.enable = false;
+        };
+        # servers.nil_ls.enable = false;
        };
       treesitter.enable = true;
       statusline.lualine.enable = true;
