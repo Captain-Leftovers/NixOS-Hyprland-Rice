@@ -14,10 +14,8 @@
     enable = true;
 
     settings = {
-
      vim = {
-
-        
+ 
       package =
         inputs.neovim-overlay.packages.${pkgs.system}.neovim;
 
@@ -26,23 +24,40 @@
         name = "gruvbox";
         style = "dark";
       };
+
+        lsp = {
+  enable = true;
         
+  servers = {
+    nixd = {
+        
+      enable = true;
+         lspconfig = {
+                filetypes = [ "nix" ];
+              };
+    };
 
-      lsp = {
-       enable = true;
-        servers.nixd = {
-        enable = true;
-        #package = pkgs.nixd;
-        };
-        # servers.nil_ls.enable = false;
-       };
-      treesitter.enable = true;
+    # Do not include nil_ls at all
+     # ❌ REMOVE or DISABLE: nil_ls
+            nil_ls = {
+              enable = false;
+            };
+  };
+};
+
+      treesitter = {
+      enable = true;
+
+      };
+
       statusline.lualine.enable = true;
-      telescope.enable = true;
-
+      telescope = {
+      enable = true;
+        
+        };
       #Languages support
       languages = {
-        nix.enable = true;
+      #  nix.enable = true; #not usre if this overrides nixd wth nil_ls if enabled
         ts.enable = true;
         };
 
