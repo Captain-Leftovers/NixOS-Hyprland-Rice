@@ -36,7 +36,7 @@
     ./swaync/swaync.nix # notification deamon
     ./taskwarrior.nix   # todo / task cli
 
-    ./neovim-nvf        # Neovim Folder with cnfg inside
+    ./neovim        # Neovim Folder with cnfg inside
     
     # ./viewnior.nix                  # image viewer
     # ./vscodium                      # vscode fork
