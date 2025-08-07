@@ -46,5 +46,6 @@
     ./xdg-mimes.nix # xdg config
     ./zsh # shell
     ./expressvpn.nix # ExpressVPN auto connect service
+    ./gammastep.nix # control bluelight/redlight
   ];
 }
