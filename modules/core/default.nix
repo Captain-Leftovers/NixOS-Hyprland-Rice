@@ -19,6 +19,5 @@
     ./bluetooth.nix
     ./expressvpn-system.nix
     ./udev.nix
-    ./gammastep.nix
   ];
 }
