@@ -118,10 +118,11 @@
         };
         laptop = nixpkgs.lib.nixosSystem {
           inherit system;
+          pkgs = pkgs;
           modules = [ ./hosts/laptop ];
           specialArgs = {
             host = "laptop";
-            inherit self inputs username;
+            inherit self inputs username pkgs;
             neovim-overlay = inputs.neovim-overlay;
           };
         };
