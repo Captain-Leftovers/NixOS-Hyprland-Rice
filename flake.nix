@@ -82,9 +82,9 @@
 
         default = final: prev: {
 
-          waybar = prev.waybar.override {
-            withBluetooth = true;
-          };
+       #   waybar = prev.waybar.override {
+        #    withBluetooth = true;
+         # };
 
         };
 
@@ -95,7 +95,8 @@
         config.allowUnfree = true;
 
         overlays = [
-          neovim-overlay.overlay
+          inputs.neovim-overlay.overlays.default
+          inputs.nur.overlays.default
           overlays.default
         ];
       };
@@ -123,7 +124,6 @@
           specialArgs = {
             host = "laptop";
             inherit self inputs username pkgs;
-            neovim-overlay = inputs.neovim-overlay;
           };
         };
         vm = nixpkgs.lib.nixosSystem {
