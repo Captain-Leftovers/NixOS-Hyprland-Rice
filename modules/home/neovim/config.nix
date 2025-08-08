@@ -12,8 +12,9 @@
    programs.neovim = {
     enable = true;
 
-    # ✅ Use nightly Neovim from your overlay
-  #  package = pkgs.neovim;
+  #point kickstart init lua to nvim config
+   extraLuaConfig = builtins.readFile ./nvim-dotfiles/init.lua;
+  
 
     # Optional: set alias so `vim` launches `nvim`
     viAlias = true;
