@@ -123,7 +123,7 @@
           modules = [ ./hosts/laptop ];
           specialArgs = {
             host = "laptop";
-            inherit self inputs username pkgs;
+            inherit self inputs username;
           };
         };
         vm = nixpkgs.lib.nixosSystem {

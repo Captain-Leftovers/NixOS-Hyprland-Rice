@@ -11,7 +11,7 @@
       day = 5500;
       night = 3700;
     };
-    tray = true; # optional: tray icon
+    #tray = true; # optional: tray icon
   };
   
 }

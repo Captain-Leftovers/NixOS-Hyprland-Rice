@@ -22,12 +22,7 @@
       ];
     };
 
-    # 👇 Add this block for automatic garbage collection
-    gc = {
-      automatic = true;
-      dates = "weekly";  # or "daily"
-      options = "--delete-older-than 7d";
-    };
+  
   
   };
 
