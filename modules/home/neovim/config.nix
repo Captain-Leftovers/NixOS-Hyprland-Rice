@@ -14,6 +14,8 @@
 
   #point kickstart init lua to nvim config
    extraLuaConfig = builtins.readFile ./nvim-dotfiles/init.lua;
+
+ #symlink instead of point to -  so changes dont need system  rebuild to affect nvim
   
 
     # Optional: set alias so `vim` launches `nvim`
