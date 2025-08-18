@@ -1,19 +1,15 @@
 { pkgs, ... }:
 
 {
-  environment.systemPackages = with pkgs; [
-    direnv
-    nix-direnv
-  ];
-
-  #set to default values
   programs.direnv = {
-    package = pkgs.direnv;
+    enable = true;
+    package = pkgs.direnv;        # optional, overrides default direnv
+    loadInNixShell = true;        # auto-load in nix-shell
     silent = false;
-    loadInNixShell = true;
-    direnvrcExtra = "";
+    direnvrcExtra = "";           # optional extra config
     nix-direnv = {
       enable = true;
-      package = pkgs.nix-direnv;
+      package = pkgs.nix-direnv;  # install nix-direnv properly
     };
+  };
 }
