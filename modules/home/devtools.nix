@@ -3,9 +3,11 @@
 {
   environment.systemPackages = with pkgs; [
     direnv
+    nix-direnv
   ];
 
-     programs.direnv = {
+  #set to default values
+  programs.direnv = {
     package = pkgs.direnv;
     silent = false;
     loadInNixShell = true;
