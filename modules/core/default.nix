@@ -19,5 +19,6 @@
     ./bluetooth.nix
     ./expressvpn-system.nix
     ./udev.nix
+    ./devtools.nix
   ];
 }
