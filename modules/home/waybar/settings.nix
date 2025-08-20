@@ -71,8 +71,11 @@ in
 
     clock = {
       calendar = {
-                    num_prev = 1;
-                    num_next = 1;
+             "mode"="year";
+             "mode-mon-col"=3;
+             "weeks-pos"="right";
+             "on-scroll"=1;
+             "on-click-right"="mode";
         format = {
           today = "<span color='#98971A'><b>{}</b></span>";
         };

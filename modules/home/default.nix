@@ -47,6 +47,5 @@
     ./zsh # shell
     ./expressvpn.nix # ExpressVPN auto connect service
     ./gammastep.nix #bluelight day / night adjust
-    ./devtools.nix 
   ];
 }
