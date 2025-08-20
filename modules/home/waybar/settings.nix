@@ -71,6 +71,8 @@ in
 
     clock = {
       calendar = {
+                    num_prev = 1;
+                    num_next = 1;
         format = {
           today = "<span color='#98971A'><b>{}</b></span>";
         };
