@@ -41,6 +41,13 @@
 
     ghostty.url = "github:ghostty-org/ghostty";
 
+
+    #opencode flake below
+     opencode = { 
+       url = "path:./modules/home/opencode";
+       inputs.nixpkgs.follows = "nixpkgs";
+     };
+
     #Neovim
 
     # using the neovim-nightly overlay
