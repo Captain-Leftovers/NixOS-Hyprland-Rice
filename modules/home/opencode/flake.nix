@@ -140,7 +140,7 @@
             # Optional runtime helpers (AUR’s opencode-bin recommends fzf + ripgrep)
             home.packages = [ cfg.package pkgs.fzf pkgs.ripgrep ];
 
-            xdg.configFile."opencode/opencode.json".text =
+            xdg.configFile."opencode/config.json".text =
               builtins.toJSON cfg.settings;
           };
         };
