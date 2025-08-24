@@ -47,5 +47,7 @@
     ./zsh # shell
     ./expressvpn.nix # ExpressVPN auto connect service
     ./gammastep.nix #bluelight day / night adjust
+
+    ./opencode #adding opencode from src with constructed flake
   ];
 }
