@@ -1,20 +1,17 @@
-{  
-  config,
-  pkgs,
-  inputs,
-  ... }:
+{ config, pkgs, inputs, lib, ... }:
 
+let
+  system = pkgs.system;
+in
 {
-  imports = [
-    inputs.opencode.homeManagerModules.default
-  ];
+  programs.opencode = {
+    enable = true;
 
-  programs.opencode.enable = true;
+    package = inputs.opencode.packages.${system}.opencode;
 
-  # optional configs you want written to ~/.config/opencode/config.json
-  programs.opencode.settings = {
-    theme = "dark";
-    telemetry = false;
+    settings = {
+      theme = "dark";
+      telemetry = false;
+    };
   };
 }
-1
