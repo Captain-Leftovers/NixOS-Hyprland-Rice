@@ -1,7 +1,7 @@
 {
   inputs = {
-    # Pull the same nixpkgs your root flake uses (no duplication).
-    nixpkgs.follows = "nixpkgs";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    
 
     # Utility to generate outputs for each system (x86_64-linux, aarch64-darwin, …).
     flake-utils.url = "github:numtide/flake-utils";
