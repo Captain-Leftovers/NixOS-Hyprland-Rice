@@ -64,10 +64,10 @@
         # correct one; paste it back here and rebuild.
         # ─────────────────────────────────────────────────────────────────────
         sha256For = {
-          "x86_64-linux"  = "sha256-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=";
-          "aarch64-linux" = "sha256-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=";
-          "x86_64-darwin" = "sha256-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=";
-          "aarch64-darwin"= "sha256-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=";
+          "x86_64-linux"  = "sha256-aY9kao9Or7BD4PPSEneeHKG0KFjr7bvC4K2aLK4zALQ=";
+          "aarch64-linux" = "sha256-aY9kao9Or7BD4PPSEneeHKG0KFjr7bvC4K2aLK4zALQ=";
+          "x86_64-darwin" = "sha256-aY9kao9Or7BD4PPSEneeHKG0KFjr7bvC4K2aLK4zALQ=";
+          "aarch64-darwin"= "sha256-aY9kao9Or7BD4PPSEneeHKG0KFjr7bvC4K2aLK4zALQ=";
         };
 
         sha256 = sha256For.${system}
