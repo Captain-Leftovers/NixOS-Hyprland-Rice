@@ -11,7 +11,6 @@ in
 
     settings = {
       theme = "dark";
-      telemetry = false;
     };
   };
 }
