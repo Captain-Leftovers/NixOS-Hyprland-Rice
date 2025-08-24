@@ -42,10 +42,6 @@
     ghostty.url = "github:ghostty-org/ghostty";
 
 
-    #opencode flake path below
-    # 👇 point to your local opencode folder (subflake)
-      opencode.url = "path:./modules/home/opencode";
-
     #Neovim
 
     # using the neovim-nightly overlay
